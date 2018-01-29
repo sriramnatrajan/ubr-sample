@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1045622891871",
+    "firebase_url": "https://ambulance-tracking-6c77d.firebaseio.com",
+    "project_id": "ambulance-tracking-6c77d",
+    "storage_bucket": "ambulance-tracking-6c77d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045622891871:android:aab6a4e012bc9f8f",
+        "android_client_info": {
+          "package_name": "com.emergency.ambulence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045622891871-reaqj486scp5fjc48c2suel51o8ubl9g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emergency.ambulence",
+            "certificate_hash": "1375e0f170d54686bae68fb59647ed2d1b9cd1eb"
+          }
+        },
+        {
+          "client_id": "1045622891871-7m6l193gitj3jeepp1b7na8omg38eapi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8Ozs4_wDkKDjTlnV4B-T0msSiBGkocpY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045622891871-7m6l193gitj3jeepp1b7na8omg38eapi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
