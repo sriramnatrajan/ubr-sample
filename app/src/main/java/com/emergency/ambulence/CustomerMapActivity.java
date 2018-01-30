@@ -420,6 +420,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                         mRequest.setText("Ambulance is Here");
                          mediaPlayer = MediaPlayer.create(context, R.raw.notify);
                             mediaPlayer.start();
+                            mediaPlayer.stop();
                         NotificationCompat.Builder builder =
                                 new NotificationCompat.Builder(context)
                                         .setSmallIcon(R.mipmap.ic_car)

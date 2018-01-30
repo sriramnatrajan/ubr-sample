@@ -22,6 +22,7 @@ public class Accident {
         this.people = people;
         this.typeAccident = typeAccident;
     }
+
     public String getAccidentId() {
         return accidentId;
     }

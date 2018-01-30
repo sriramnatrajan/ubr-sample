@@ -142,7 +142,7 @@ TextView mAccidentType,userFeedBack;
                             public void run() {
                                 feedback();
                             }
-                        },20000);
+                        },30000);
                         //feedback();
                         break;
                     case 2:
