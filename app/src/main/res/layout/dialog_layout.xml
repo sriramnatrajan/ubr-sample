@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/layout_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/tv_dialogText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Delete"
+        android:textSize="40dp"
+        android:textColor="@color/md_grey_600"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_delete"
+        android:layout_marginTop="21dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textColor="@color/md_grey_600"
+        android:text="Are you sure want to delete?"
+        android:textSize="19dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/tv_dialogText"
+        android:layout_marginTop="16dp"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:layout_below="@+id/TV_delete"
+         />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="34dp"
+        android:layout_alignTop="@+id/tv_dialogText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_above="@+id/no_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:text="No"
+            android:background="@color/md_green_500"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_btn"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBaseline="@+id/yes_btn"
+            android:layout_alignBottom="@+id/yes_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/yes_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_toEndOf="@+id/no_btn"
+            android:layout_toRightOf="@+id/no_btn"
+            android:background="@color/md_red_900"
+            android:text="Yes" />
+    </RelativeLayout>
+</RelativeLayout>

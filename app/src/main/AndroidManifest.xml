@@ -44,8 +44,10 @@
 
         <activity
             android:name="com.emergency.ambulence.DriverMapActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_driver_map" />
-        <activity android:name="com.emergency.ambulence.CustomerMapActivity" />
+        <activity android:name="com.emergency.ambulence.CustomerMapActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name="com.emergency.ambulence.CustomerSettingsActivity" />
         <activity android:name="com.emergency.ambulence.DriverSettingsActivity" />
         <activity android:name="com.emergency.ambulence.HistoryActivity" />

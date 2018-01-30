@@ -699,5 +699,48 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         super.onDestroy();
         mediaPlayer.stop();
     }
+/*
+ refresh.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            final Dialog mDialog=new Dialog(context);
+            mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            mDialog.setContentView(R.layout.dialog_layout);
+
+
+            TextView text=(TextView)mDialog.findViewById(R.id.tv_dialogText);
+            TextView desc=(TextView)mDialog.findViewById(R.id.TV_delete);
+            Button yes=(Button)mDialog.findViewById(R.id.yes_btn);
+
+            Button no=(Button)mDialog.findViewById(R.id.no_btn);
+            yes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    File file = new File(getFilesDir() + "/" + video_name);
+                    if (file.exists()) {
+                        file.delete();
+                        finish();
+
+                        //mDownloadActivity.btnDownload.setImageResource(R.drawable.download);
+                        Toast.makeText(getApplicationContext(), "Content Deleted", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                }
+            });
+            no.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mDialog.dismiss();
+                }
+            });
+            mDialog.show();
+
+        }
+    });
+*/
+
 
 }

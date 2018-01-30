@@ -290,7 +290,7 @@ TextView mAccidentType,userFeedBack;
                         mCustomerDestination.setText("Destination: " + destination);
                     }
                     else{
-                        mCustomerDestination.setText("Destination: --");
+                        mCustomerDestination.setText("Destination: Hospital");
                     }
 
                     Double destinationLat = 0.0;
@@ -344,7 +344,7 @@ TextView mAccidentType,userFeedBack;
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String name = dataSnapshot.child("people").getValue(String.class);
                 String number = dataSnapshot.child("typeAccident").getValue(String.class);
-                mAccidentType.setText("Number of People Injured ="+name+"  Incident"+number);
+                mAccidentType.setText("Number of People Injured ="+name+"  Incident ="+number);
                 Log.d("TAG","Number of People Injured ="+name+"Incident :"+n);
 
             }
@@ -580,7 +580,7 @@ TextView mAccidentType,userFeedBack;
                 // String number = dataSnapshot.child("typeAccident").getValue(String.class);
                 // feedText.setText("Number of People Injured ="+fdText);
                 Log.d("TAG","Number of People Injured ="+fdText);
-                userFeedBack.setText("User FeedBack="+fdText);
+                userFeedBack.setText("User Feedback="+fdText);
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
