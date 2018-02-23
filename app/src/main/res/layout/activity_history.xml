@@ -12,13 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
+   <!--     <TextView
             android:padding="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Balance: 1000€"
             android:id="@+id/balance"
-            android:visibility="gone"/>
+            android:visibility="gone"/>-->
     </LinearLayout>
 
     <android.support.v4.widget.NestedScrollView

@@ -1,9 +1,5 @@
 package com.emergency.ambulence;
 
-/**
- * Created by aravind on 28/1/18.
- */
-
 
 public class Accident {
 

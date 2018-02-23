@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20sp">
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/time"
-        android:textSize="12dp"
-        android:text="time"/>
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:text="time"
+        android:textSize="16dp" />
+
     <TextView
+        android:id="@+id/rideId"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/time"
+        android:layout_alignRight="@+id/time"
+        android:layout_below="@+id/time"
+        android:text="rideId"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rideId"
-        android:textSize="12dp"
-        android:text="rideId"/>
-</LinearLayout>
+        android:layout_alignBottom="@+id/time"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView2"
+        android:text="Time"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rideId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Ride ID"
+        android:textSize="16dp" />
+</RelativeLayout>

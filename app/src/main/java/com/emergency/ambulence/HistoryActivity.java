@@ -1,22 +1,21 @@
 package com.emergency.ambulence;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateFormat;
-import android.view.View;
 import android.widget.TextView;
 
+import com.emergency.ambulence.historyRecyclerView.HistoryAdapter;
+import com.emergency.ambulence.historyRecyclerView.HistoryObject;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.emergency.ambulence.historyRecyclerView.HistoryAdapter;
-import com.emergency.ambulence.historyRecyclerView.HistoryObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -39,7 +38,7 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        mBalance = findViewById(R.id.balance);
+
 
         mHistoryRecyclerView = (RecyclerView) findViewById(R.id.historyRecyclerView);
         mHistoryRecyclerView.setNestedScrollingEnabled(false);
@@ -55,7 +54,7 @@ public class HistoryActivity extends AppCompatActivity {
         getUserHistoryIds();
 
         if(customerOrDriver.equals("Drivers")){
-            mBalance.setVisibility(View.VISIBLE);
+
         }
     }
 

@@ -1,5 +1,6 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -46,7 +47,7 @@
                 android:text="Settings"/>
         </LinearLayout>
 
-        <android.support.v7.widget.CardView
+      <!--  <android.support.v7.widget.CardView
             android:layout_below="@+id/buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
                 />
-        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>-->
     </RelativeLayout>
 
 
@@ -105,6 +106,7 @@
                     android:paddingBottom="10sp"
                     android:paddingTop="20sp"/>
                 <RatingBar
+                    android:visibility="invisible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/ratingBar"
@@ -114,6 +116,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/idk"
             android:background="@android:color/white"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -140,14 +143,28 @@
                     android:id="@+id/CcuVan"/>
             </RadioGroup>
 
+
+
             <Button
-                android:layout_gravity="bottom"
+                android:id="@+id/request2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="call Ambulance"
-                android:id="@+id/request2"/>
+                android:layout_height="42dp"
+                android:layout_gravity="bottom"
+                android:text="call Ambulance" />
         </LinearLayout>
     </LinearLayout>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/idk"
+        android:layout_marginBottom="70dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_gravity="center|bottom"
+        android:tint="@color/md_white_1000"
+        app:backgroundTint="@color/md_red_800"
+        app:fabSize="normal" />
 </FrameLayout>
 

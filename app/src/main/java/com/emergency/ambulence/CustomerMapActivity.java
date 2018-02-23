@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NotificationCompat;
@@ -38,12 +39,8 @@ import com.firebase.geofire.GeoQuery;
 import com.firebase.geofire.GeoQueryEventListener;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
-import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -70,8 +67,8 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
     Location mLastLocation;
     LocationRequest mLocationRequest;
 
-    private Button mLogout, mRequest, mSettings, mHistory;
-
+    private Button mLogout,  mSettings, mHistory;
+    private TextView mRequest;
     private LatLng pickupLocation;
 
     private Boolean requestBol = false;
@@ -95,9 +92,11 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
     private RatingBar mRatingBar;
 
     final Context context = this;
+    FloatingActionButton mFloatingActionButton;
     MediaPlayer mediaPlayer;
     DatabaseReference mDatabaseReference;
-    String peoples,accidentType;EditText userInput;
+    String peoples,accidentType;
+    EditText userInput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,11 +127,18 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         mRadioGroup.check(R.id.FirstAidVan);
 
         mLogout = (Button) findViewById(R.id.logout);
-        mRequest = (Button) findViewById(R.id.request2);
+        mRequest = (TextView) findViewById(R.id.request2);
 
         mSettings = (Button) findViewById(R.id.settings);
         mHistory = (Button) findViewById(R.id.history);
+        mFloatingActionButton=(FloatingActionButton)findViewById(R.id.fab_emergency);
 
+       /* mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                }
+        });*/
         mLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -165,7 +171,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
             }
         });
 
-        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
+    /*    PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
                 getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
 
         autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
@@ -180,8 +186,8 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
             public void onError(Status status) {
                 // TODO: Handle the error.
             }
-        });
-        mRequest.setOnClickListener(new View.OnClickListener() {
+        });*/
+        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -554,7 +560,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         if (mDriverMarker != null) {
             mDriverMarker.remove();
         }
-        mRequest.setText("call Ambulance");
+        mRequest.setText("");
 
         mDriverInfo.setVisibility(View.GONE);
         mDriverName.setText("");

@@ -1,9 +1,10 @@
 package com.emergency.ambulence;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class DriverLoginActivity extends AppCompatActivity {
+public class DriverLoginActivity extends Activity {
     private EditText mEmail, mPassword;
     private Button mLogin, mRegistration;
 
@@ -42,6 +43,8 @@ public class DriverLoginActivity extends AppCompatActivity {
                 }
             }
         };
+        TextInputLayout inputLayoutName = (TextInputLayout) findViewById(R.id.input_layout_email);
+        TextInputLayout  inputLayoutEmail = (TextInputLayout) findViewById(R.id.input_layout_email);
 
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
